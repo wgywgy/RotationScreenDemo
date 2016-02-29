@@ -23,27 +23,13 @@ class ViewController: UIViewController {
 
     @IBAction func pushLan(sender: AnyObject) {
         let exVc = SubViewController()
-        exVc.isPo = true
+        exVc.isPortrait = false
         self.navigationController?.pushViewController(exVc, animated: true)
     }
 
     @IBAction func pushPo(sender: AnyObject) {
         let exVc = SubViewController()
-        exVc.isPo = false
+        exVc.isPortrait = true
         self.navigationController?.pushViewController(exVc, animated: true)
     }
-    
-    // MARK: ROTATE
-//    override func shouldAutorotate() -> Bool {
-//        return false
-//    }
-//    
-//    override func preferredInterfaceOrientationForPresentation() -> UIInterfaceOrientation {
-//        return .Portrait
-//    }
-//    
-//    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-//        return .Portrait
-//    }
-
 }

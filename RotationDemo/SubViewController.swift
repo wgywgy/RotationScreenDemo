@@ -10,16 +10,16 @@ import UIKit
 
 class SubViewController: UIViewController {
     
-    var isPo: Bool? {
+    var isPortrait: Bool? {
         didSet {
-            print("isPo: \(isPo)")
+            print("isPo: \(isPortrait)")
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 
             appDelegate.screenOpt = .AllButUpsideDown
-            if isPo! {
-                UIDevice.currentDevice().setValue(UIDeviceOrientation.LandscapeLeft.rawValue, forKey: "orientation")
-            } else {
+            if isPortrait! {
                 UIDevice.currentDevice().setValue(UIDeviceOrientation.Portrait.rawValue, forKey: "orientation")
+            } else {
+                UIDevice.currentDevice().setValue(UIDeviceOrientation.LandscapeLeft.rawValue, forKey: "orientation")
             }
         }
     }
